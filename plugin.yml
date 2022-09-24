@@ -1,0 +1,10 @@
+name: Spell-Check
+description: a buildkite plugin for spell checking of markdown files using docker image tmaier/markdown-spellcheck
+author: https://github.com/robertkruk
+requirements: []
+configuration:
+  properties:
+    pattern: 
+      type: string
+  required:
+    - pattern

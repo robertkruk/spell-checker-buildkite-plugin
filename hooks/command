@@ -1,0 +1,8 @@
+#!/bin/bash
+set -uo pipefail
+
+SPELLING_ERR=$( docker run --rm -ti -v $PWD:/workdir tmaier/markdown-spellcheck:latest --report "*.md" 2>&1 )
+FORMATTED_ERR=$( echo $SPELLING_ERR | sed 's/\[1m/<h4>/g;s/\[22m/<\/h4>/g;s/\[31m/<div class="inline red">/g;s/\[39m/<\/div>/g' )
+
+echo $FORMATTED_ERR
+buildkite-agent annotate "<pre class='term'><code><div>The following spelling errors have been found in the markdown files of this project: <\/div>$FORMATTED_ERR</code></pre>" --style "info"
