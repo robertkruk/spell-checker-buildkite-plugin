@@ -1,7 +1,7 @@
 
   - label: ":sparkles: lint"
     plugins:
-      - plugin-linter#v1.0.0:
+      - plugin-linter#v3.0.0:
           id: robertkruk/spell-checker
   - label: "spell check md files"
     plugins:
