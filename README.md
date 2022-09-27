@@ -7,7 +7,7 @@ A test Buildkite plugin to check Markdown files for any  spelling errors utilisi
 ```yaml
 steps:
   - plugins:
-    - robertkruk/spell-checker#v0.1:
+    - robertkruk/spell-checker#v0.1.5:
         pattern: '*.md'
 ```
 
