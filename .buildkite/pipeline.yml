@@ -5,5 +5,5 @@
           id: robertkruk/spell-checker
   - label: "spell check md files"
     plugins:
-      - robertkruk/spell-checker#v0.1.4:
+      - robertkruk/spell-checker#v0.1.5:
           pattern: '*.md'
